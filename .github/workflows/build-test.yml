@@ -10,12 +10,13 @@ on:
 jobs:
   build-and-test:
     name: Build & Test Job
-    runs-on: [self-hosted, ostad-runner]
+    runs-on: [self-hosted, Windows, X64]
 
     steps:
       - name: Runner Environment Information
         shell: powershell
         run: |
+          Write-Host "Runner Name: ostad-runner"
           Write-Host "Runner Machine Name: $env:COMPUTERNAME"
           Write-Host "Runner OS: $env:OS"
           Write-Host "Runner User: $env:USERNAME"
