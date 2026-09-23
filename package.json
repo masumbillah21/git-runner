@@ -1,0 +1,12 @@
+{
+  "name": "ostad-runner-demo",
+  "version": "1.0.0",
+  "description": "Simple build and test project for GitHub Actions Self-Hosted Runner (ostad-runner)",
+  "main": "index.js",
+  "scripts": {
+    "build": "node index.js",
+    "test": "node test.js"
+  },
+  "author": "H M Masum Billah",
+  "license": "MIT"
+}

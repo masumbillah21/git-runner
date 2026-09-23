@@ -1,0 +1,41 @@
+name: Build and Test on Self-Hosted Runner
+
+on:
+  push:
+    branches: [ "main", "master" ]
+  pull_request:
+    branches: [ "main", "master" ]
+  workflow_dispatch:
+
+jobs:
+  build-and-test:
+    name: Build & Test Job
+    runs-on: [self-hosted, ostad-runner]
+
+    steps:
+      - name: Runner Environment Information
+        shell: powershell
+        run: |
+          Write-Host "Runner Machine Name: $env:COMPUTERNAME"
+          Write-Host "Runner OS: $env:OS"
+          Write-Host "Runner User: $env:USERNAME"
+          Write-Host "Execution Time: $(Get-Date)"
+
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Verify Node.js Environment
+        shell: powershell
+        run: |
+          node -v
+          npm -v
+
+      - name: Run Build
+        shell: powershell
+        run: |
+          npm run build
+
+      - name: Run Tests
+        shell: powershell
+        run: |
+          npm test

@@ -1,0 +1,13 @@
+# Dependencies
+node_modules/
+
+# Logs & Runner artifacts
+*.log
+_diag/
+_work/
+actions-runner/
+*.zip
+
+# Environment & OS files
+.DS_Store
+Thumbs.db
