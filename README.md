@@ -19,7 +19,8 @@ This repository demonstrates the setup and execution of a GitHub Actions Self-Ho
 
 The workflow is defined at [`.github/workflows/build-test.yml`](.github/workflows/build-test.yml):
 
-- **Target Runner**: `runs-on: [self-hosted, ostad-runner]`
+- **Target Runner**: `runs-on: [self-hosted, Windows, X64]` (Runner: `ostad-runner`)
+- **Successful Job Run**: [Build & Test Job #2](https://github.com/masumbillah21/git-runner/actions/runs/35828531684/job/107075551740)
 - **Triggers**: `push`, `pull_request`, `workflow_dispatch`
 - **Steps**:
   1. Environment diagnostics & runner details
