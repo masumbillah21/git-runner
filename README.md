@@ -31,11 +31,17 @@ The workflow is defined at [`.github/workflows/build-test.yml`](.github/workflow
 
 ---
 
-## 📸 Successful Runner Job Execution
+## 📸 Screenshots & Proof of Execution
 
-Below is the screenshot showing the successful workflow/job execution on **`ostad-runner`**:
+### 1. Configured Self-Hosted Runner (`ostad-runner`)
+The runner was registered and connected as `ostad-runner`:
 
-![Successful Runner Job](screenshots/runner-job-success.png)
+![Configured ostad-runner](screenshots/runner.png)
+
+### 2. Successful Workflow & Job Execution
+The build & test job executed successfully on `ostad-runner`:
+
+![Successful Runner Job Execution](screenshots/runner-job-success.png)
 
 ---
 
